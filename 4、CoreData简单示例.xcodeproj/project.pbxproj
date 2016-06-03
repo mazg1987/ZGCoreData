@@ -14,6 +14,11 @@
 		A5D6DE731B12AF4900430CF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D6DE721B12AF4900430CF3 /* Images.xcassets */; };
 		A5D6DE761B12AF4900430CF3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D6DE741B12AF4900430CF3 /* LaunchScreen.xib */; };
 		A5D6DE821B12AF4A00430CF3 /* __CoreData____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D6DE811B12AF4A00430CF3 /* __CoreData____Tests.m */; };
+		A5D6DE8C1B12AF8000430CF3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6DE8B1B12AF8000430CF3 /* CoreData.framework */; };
+		A5D6DE991B12C09F00430CF3 /* mmDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D6DE961B12C09F00430CF3 /* mmDAO.m */; };
+		A5D6DE9A1B12C09F00430CF3 /* NSManagedObject+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D6DE981B12C09F00430CF3 /* NSManagedObject+helper.m */; };
+		A5D6DE9D1B12C38500430CF3 /* studentSqlite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5D6DE9B1B12C38500430CF3 /* studentSqlite.xcdatamodeld */; };
+		A5D6DEA01B12C3C100430CF3 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D6DE9F1B12C3C100430CF3 /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,14 @@
 		A5D6DE7B1B12AF4A00430CF3 /* 4、CoreData简单示例Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "4、CoreData简单示例Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D6DE801B12AF4A00430CF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5D6DE811B12AF4A00430CF3 /* __CoreData____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "__CoreData____Tests.m"; sourceTree = "<group>"; };
+		A5D6DE8B1B12AF8000430CF3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A5D6DE951B12C09F00430CF3 /* mmDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mmDAO.h; sourceTree = "<group>"; };
+		A5D6DE961B12C09F00430CF3 /* mmDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mmDAO.m; sourceTree = "<group>"; };
+		A5D6DE971B12C09F00430CF3 /* NSManagedObject+helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+helper.h"; sourceTree = "<group>"; };
+		A5D6DE981B12C09F00430CF3 /* NSManagedObject+helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+helper.m"; sourceTree = "<group>"; };
+		A5D6DE9C1B12C38500430CF3 /* studentSqlite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = studentSqlite.xcdatamodel; sourceTree = "<group>"; };
+		A5D6DE9E1B12C3C100430CF3 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		A5D6DE9F1B12C3C100430CF3 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D6DE8C1B12AF8000430CF3 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +77,7 @@
 		A5D6DE591B12AF4900430CF3 = {
 			isa = PBXGroup;
 			children = (
+				A5D6DE8B1B12AF8000430CF3 /* CoreData.framework */,
 				A5D6DE641B12AF4900430CF3 /* 4、CoreData简单示例 */,
 				A5D6DE7E1B12AF4A00430CF3 /* 4、CoreData简单示例Tests */,
 				A5D6DE631B12AF4900430CF3 /* Products */,
@@ -85,6 +100,7 @@
 				A5D6DE6A1B12AF4900430CF3 /* AppDelegate.m */,
 				A5D6DE6C1B12AF4900430CF3 /* ViewController.h */,
 				A5D6DE6D1B12AF4900430CF3 /* ViewController.m */,
+				A5D6DE941B12C05D00430CF3 /* 数据库 */,
 				A5D6DE6F1B12AF4900430CF3 /* Main.storyboard */,
 				A5D6DE721B12AF4900430CF3 /* Images.xcassets */,
 				A5D6DE741B12AF4900430CF3 /* LaunchScreen.xib */,
@@ -117,6 +133,20 @@
 				A5D6DE801B12AF4A00430CF3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5D6DE941B12C05D00430CF3 /* 数据库 */ = {
+			isa = PBXGroup;
+			children = (
+				A5D6DE951B12C09F00430CF3 /* mmDAO.h */,
+				A5D6DE961B12C09F00430CF3 /* mmDAO.m */,
+				A5D6DE971B12C09F00430CF3 /* NSManagedObject+helper.h */,
+				A5D6DE981B12C09F00430CF3 /* NSManagedObject+helper.m */,
+				A5D6DE9B1B12C38500430CF3 /* studentSqlite.xcdatamodeld */,
+				A5D6DE9E1B12C3C100430CF3 /* Student.h */,
+				A5D6DE9F1B12C3C100430CF3 /* Student.m */,
+			);
+			path = "数据库";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +249,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D6DE991B12C09F00430CF3 /* mmDAO.m in Sources */,
 				A5D6DE6E1B12AF4900430CF3 /* ViewController.m in Sources */,
+				A5D6DE9A1B12C09F00430CF3 /* NSManagedObject+helper.m in Sources */,
+				A5D6DE9D1B12C38500430CF3 /* studentSqlite.xcdatamodeld in Sources */,
+				A5D6DEA01B12C3C100430CF3 /* Student.m in Sources */,
 				A5D6DE6B1B12AF4900430CF3 /* AppDelegate.m in Sources */,
 				A5D6DE681B12AF4900430CF3 /* main.m in Sources */,
 			);
@@ -412,6 +446,7 @@
 				A5D6DE871B12AF4A00430CF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5D6DE881B12AF4A00430CF3 /* Build configuration list for PBXNativeTarget "4、CoreData简单示例Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,8 +455,22 @@
 				A5D6DE8A1B12AF4A00430CF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A5D6DE9B1B12C38500430CF3 /* studentSqlite.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A5D6DE9C1B12C38500430CF3 /* studentSqlite.xcdatamodel */,
+			);
+			currentVersion = A5D6DE9C1B12C38500430CF3 /* studentSqlite.xcdatamodel */;
+			path = studentSqlite.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A5D6DE5A1B12AF4900430CF3 /* Project object */;
 }

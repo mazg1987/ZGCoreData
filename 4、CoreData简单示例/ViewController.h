@@ -10,6 +10,16 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *textfiled1;
+@property (weak, nonatomic) IBOutlet UITextField *textfield2;
+@property (weak, nonatomic) IBOutlet UITextField *textfiled3;
+
+- (IBAction)save:(id)sender;
+- (IBAction)read:(id)sender;
+- (IBAction)deleteMe:(id)sender;
+- (IBAction)modify:(id)sender;
+
+
 
 @end
 

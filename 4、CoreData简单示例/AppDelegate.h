@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "mmDAO.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
